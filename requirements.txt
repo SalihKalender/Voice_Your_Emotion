@@ -1,0 +1,9 @@
+flask
+sounddevice
+soundfile
+numpy
+librosa
+tensorflow
+scikit-learn
+sys
+io

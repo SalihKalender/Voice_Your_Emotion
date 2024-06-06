@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Classification</title>
+</head>
+<body>
+    <h1>Audio Classification</h1>
+    <button id="recordButton">Kaydı Başlat</button>
+    <script>
+        // Kayıt düğmesine tıklama işlevi
+        document.getElementById('recordButton').onclick = function() {
+            fetch('/predict', {method: 'POST'})
+                .then(response => response.text())
+                .then(prediction => {
+                    alert('Tahmin: ' + prediction);
+                })
+                .catch(error => console.error('Hata:', error));
+        };
+    </script>
+</body>
+</html>
